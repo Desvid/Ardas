@@ -1,4 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@import './assets/styles/variables.scss';
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: $color-light-grey;
+  color: $color-dark;
+  margin: 0;
+  font-family: $font-family-base !important;
+  font-size: $font-size-base !important;
+  line-height: $line-height-base-size;
+  padding-top: 120px;
+}
+
+.page-content {
+  width: $page-content-width;
+  margin: 0 auto;
+}
+
+.template {
+  margin-top: 60px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  &, & * {
+    padding: 20px;
+    border-radius: 10px;
+  }
+  background-color: $template-color;
+  .container {
+    background-color: $container-color; 
+  }
+  .editable {
+    cursor: pointer;
+    background-color: $editable-color;
+    margin: 6px 0;
+    height: auto;
+    line-height: initial;
+    &:hover {
+      background-color: $editable-hover-color;
+    }
+  }
+}

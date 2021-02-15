@@ -1,0 +1,8 @@
+<div class="page-content">
+  <app-table
+    *ngIf="tableData"
+    [dataSource]="tableData"
+    [displayedColumns]="displayedTableColumns"
+    (onCellClick)="handleCellClick($event)"
+  ></app-table>
+</div>
